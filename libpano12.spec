@@ -17,8 +17,6 @@
 %define libname %mklibname pano12_ %{lib_major}
 %define develname %mklibname -d pano12_
 
-%define gcc_version %(gcc --version | head -n 1 | awk '{print $3}')
-
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
@@ -27,7 +25,7 @@ License:	GPL
 Group:		System/Libraries
 Source:		%{name}-%{version}.tar.gz
 URL:		http://panotools.sourceforge.net/
-BuildRequires:	libgcj-devel
+BuildRequires:	java-1.7.0-icedtea-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libtiff-devel
@@ -67,7 +65,7 @@ Developent headers for Helmut Dersch's Panorama Tools.
 %if %bigfov
 perl -pi -e "s|\#define\s+MAX_FISHEYE_FOV.*|\#define MAX_FISHEYE_FOV 3600|" filter.h
 %endif
-export CFLAGS="$RPM_OPT_FLAGS -fPIC -I%{_includedir}/libgcj-%{gcc_version} -D__Ansi__"
+export CFLAGS="$RPM_OPT_FLAGS -fPIC"
 %configure2_5x --enable-shared=yes --enable-static=no --disable-rpath
 %make
 
