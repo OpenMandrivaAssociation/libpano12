@@ -6,7 +6,7 @@
 
 %define name	libpano12
 %define version 2.8.6
-%define	rel	2
+%define	rel	3
 %if %bigfov
 %define distsuffix plf
 %endif
@@ -36,7 +36,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}
 Utilies for Helmut Dersch's Panorama Tools.
 
 %if %bigfov
-This build is in PLF because there is a patent if FOV is > 160
+This package is in PLF because there is a patent if FOV is > 160
 %endif
 
 %package -n %{libname}
