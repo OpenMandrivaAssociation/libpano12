@@ -6,7 +6,7 @@
 
 %define name	libpano12
 %define version 2.8.6
-%define	rel	3
+%define	rel	4
 %if %bigfov
 %define distsuffix plf
 %endif
@@ -30,7 +30,7 @@ BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libtiff-devel
 BuildRequires:	zlib-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Utilies for Helmut Dersch's Panorama Tools.
@@ -63,6 +63,7 @@ Developent headers for Helmut Dersch's Panorama Tools.
 %setup -q
 
 %build
+export LIBS="-lm"
 %if %bigfov
 perl -pi -e "s|\#define\s+MAX_FISHEYE_FOV.*|\#define MAX_FISHEYE_FOV 3600|" filter.h
 %endif
