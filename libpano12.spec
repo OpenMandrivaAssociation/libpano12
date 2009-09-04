@@ -6,7 +6,7 @@
 
 %define name	libpano12
 %define version 2.8.6
-%define	rel	4
+%define	rel	5
 %if %bigfov
 %define distsuffix plf
 %endif
