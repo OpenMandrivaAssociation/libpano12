@@ -24,7 +24,7 @@ Summary:	Panorama Tools library
 License:	GPL
 Group:		System/Libraries
 Source:		%{name}-%{version}.tar.gz
-URL:		http://panotools.sourceforge.net/
+URL:		https://panotools.sourceforge.net/
 BuildRequires:	java-1.7.0-icedtea-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
