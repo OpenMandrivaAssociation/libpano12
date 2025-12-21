@@ -25,6 +25,11 @@ License:	GPL
 Group:		System/Libraries
 Source:		%{name}-%{version}.tar.gz
 URL:		https://panotools.sourceforge.net/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	java-1.7.0-icedtea-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
