@@ -11,7 +11,7 @@
 %define distsuffix plf
 %endif
 
-%define	release	%mkrel %{rel}
+%define	release %{rel}.1
 
 %define lib_major 0
 %define libname %mklibname pano12_ %{lib_major}
